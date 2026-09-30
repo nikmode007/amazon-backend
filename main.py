@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 
 
-from app.database.connection import Base, engine
+from app.database.connection_db import Base, engine
 from app.routes.Vender_routes import router
 
 

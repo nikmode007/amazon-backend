@@ -1,10 +1,10 @@
 from sqlalchemy.orm import Session
-
-from app.schemas.Vender import VenderCreate
+from app.models.vender_model import Vender as VenderModel
+from app.DTO.vender_dto import VenderCreate
 
 
 def create_Vender(db: Session, Vender: VenderCreate):
-    new_Vender = Vender(
+    new_Vender = VenderModel(
     first_name=  Vender.first_name,
     last_name= Vender.last_name,
     Age=Vender.Age,

@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from sqlalchemy.orm import Mapped
+
 
 
 class VenderCreate(BaseModel):
