@@ -7,15 +7,15 @@ from app.controllers.User_controller import (
     create_User
 )
 
-router = APIRouter(
+routers = APIRouter(
     prefix="/Users",
     tags=["Users"]
 )
 
 
-@router.post("/add_User", response_model=UserResponse)
+@routers.post("/add_User", response_model=UserResponse)
 def add_User(
-    User: userCreate,
+    User: UserCreate,
     db: Session = Depends(get_db)
 ):
 
